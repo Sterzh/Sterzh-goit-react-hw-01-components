@@ -1,5 +1,4 @@
 import user from 'data/user.json';
-// import user from '../user.json';
 import Profile from './Profile/Profile';
 
 import data from 'data/data.json';

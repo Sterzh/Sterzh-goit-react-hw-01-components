@@ -1,4 +1,5 @@
 import css from './Statistics.module.css';
+import PropTypes from 'prop-types';
 
 const Statistics = ({ title = '', stats = [] }) => {
   return (
@@ -11,6 +12,11 @@ const Statistics = ({ title = '', stats = [] }) => {
       </ul>
     </section>
   );
+};
+
+Statistics.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.array.isRequired,
 };
 
 export default Statistics;
@@ -28,6 +34,11 @@ const Stat = ({ label, percentage }) => {
       <span className={css.percentage}>{percentage}</span>
     </li>
   );
+};
+
+Stat.propTypes = {
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
 };
 
 const randColor = () => {
