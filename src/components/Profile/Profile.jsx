@@ -29,12 +29,16 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
   );
 };
 
+export default Profile;
+
 Profile.propTypes = {
   username: PropTypes.string.isRequired,
   tag: PropTypes.string,
   location: PropTypes.string.isRequired,
   avatar: PropTypes.string,
-  stats: PropTypes.object,
+  stats: PropTypes.shape({
+    followers: PropTypes.number.isRequired,
+    views: PropTypes.number.isRequired,
+    likes: PropTypes.number.isRequired,
+  }).isRequired,
 };
-
-export default Profile;
